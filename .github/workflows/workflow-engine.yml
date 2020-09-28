@@ -42,11 +42,11 @@ jobs:
     - name: Run Workflow Engine
       run: java -jar ${{github.workspace}}/workflow_engine/WorkflowClient.jar --workflowengine.url="${{secrets.WORKFLOWENGINE_URL}}" --workflowengine.token="${{secrets.WORKFLOWENGINE_TOKEN}}" --app.manifest.path=${{github.workspace}}/workflow_engine/app.yml --sec.manifest.path=${{github.workspace}}/workflow_engine/workflow.yml
     
-    - name: Print Results
-      run: cat coverity-results.sarif.json
+    - name: Print Workflow Engine Results
+      run: cat workflowengine-results.sarif.json
     
     - name: Upload SARIF file
       uses: github/codeql-action/upload-sarif@v1
       with:
         # Path to SARIF file relative to the root of the repository
-        sarif_file: coverity-results.sarif.json
+        sarif_file: workflowengine-results.sarif.json
