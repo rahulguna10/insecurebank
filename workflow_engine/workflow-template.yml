@@ -39,7 +39,7 @@ tool_information:
 - tool_name: coverity
   enabled: true
   fields:
-    file_path: "coverity-results.json"
+    file_path: "{{WORKSPACE_PATH}}/workflow_engine/coverity-results.json"
 - tool_name: polaris
   enabled: false
   fields:
