@@ -1,10 +1,10 @@
-INSERT INTO account VALUES ('john@example.com','John', 'Smith', 'D3mo!');
-INSERT INTO account VALUES ('stafford@example.com','Stafford', 'Jo', 'D3mo!');
-INSERT INTO account VALUES ('nicky@example.com','Nicky', 'Easton', 'D3mo!');
-INSERT INTO account VALUES ('ray@example.com','Ray', 'Merlyn', 'D3mo!');
-INSERT INTO account VALUES ('orrell@example.com','Orrell', 'Fred', 'D3mo!');
-INSERT INTO account VALUES ('doug@example.com','Doug', 'Davie', 'D3mo!');
-INSERT INTO account VALUES ('joby@example.com','Joby', 'Fulton', 'D3mo!');
+INSERT INTO account VALUES ('john@example.com','John', 'Smith', 'demo');
+INSERT INTO account VALUES ('stafford@example.com','Stafford', 'Jo', 'demo');
+INSERT INTO account VALUES ('nicky@example.com','Nicky', 'Easton', 'demo');
+INSERT INTO account VALUES ('ray@example.com','Ray', 'Merlyn', 'demo');
+INSERT INTO account VALUES ('orrell@example.com','Orrell', 'Fred', 'demo');
+INSERT INTO account VALUES ('doug@example.com','Doug', 'Davie', 'demo');
+INSERT INTO account VALUES ('joby@example.com','Joby', 'Fulton', 'demo');
 
 INSERT INTO cashaccount VALUES (1,'10669803404133150948', 'ray@example.com', 3424.32,'Checking Account');
 INSERT INTO cashaccount VALUES (2,'00948343154448310446', 'joby@example.com', 2479.13,'Checking Account');
