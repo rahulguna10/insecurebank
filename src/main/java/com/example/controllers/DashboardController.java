@@ -59,6 +59,7 @@ public class DashboardController {
 
 		model.addAttribute("account", account);
 		model.addAttribute("cashAccounts", cashAccounts);
+		model.addAttribute("cashAccounts", cashAccounts);
 		model.addAttribute("creditAccounts", creditAccounts);
 		return "dashboard";
 	}
