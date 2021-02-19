@@ -3,7 +3,7 @@ Resources:
   AppNode:
     Type: AWS::EC2::Instance
     Properties:
-      InstanceType: t2.medium
+      InstanceType: t2.small
       ImageId: ami-0996d3051b72b5b2c
       KeyName: SIG-DEVSECOPS-IB-KEYPAIR
       SecurityGroups:
