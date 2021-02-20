@@ -3,6 +3,7 @@ Resources:
   AppNode:
     Type: AWS::EC2::Instance
     Properties:
+      IamInstanceProfile: arn:aws:iam::946667311654:instance-profile/SIG-DEVSECOPS-IB-EC2-ROLE
       InstanceType: t2.small
       ImageId: ami-0996d3051b72b5b2c
       KeyName: SIG-DEVSECOPS-IB-KEYPAIR
