@@ -21,14 +21,14 @@ Resources:
         printf "[Service]\nExecStart=\nExecStart=/usr/bin/dockerd -H fd:// -H tcp://0.0.0.0:2375\n" >>  /etc/systemd/system/docker.service.d/docker.conf
         systemctl daemon-reload
         systemctl restart docker
-        sudo apt-get update
-        sudo apt-get -y install ruby
-        sudo apt-get -y install wget
+        apt-get update -qq
+        apt-get -y install ruby
+        apt-get -y install wget
         cd /home/ubuntu
         wget https://aws-codedeploy-us-east-2.s3.us-east-2.amazonaws.com/latest/install
-        sudo chmod +x ./install
-        sudo ./install auto > /tmp/logfile
-        sudo service codedeploy-agent start
+        chmod +x ./install
+        ./install auto > /tmp/logfile
+        service codedeploy-agent start
   AppNodeSG:
     Type: AWS::EC2::SecurityGroup
     Properties:
