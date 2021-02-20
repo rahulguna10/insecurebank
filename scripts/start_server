@@ -1,3 +1,5 @@
 #!/bin/bash
 cd /home/ubuntu/deploy
+aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/q8s1o0x0
+docker pull public.ecr.aws/q8s1o0x0/sig-devsecops-ib-ecr:1.0
 docker-compose up &
