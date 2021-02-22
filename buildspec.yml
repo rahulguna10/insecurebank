@@ -13,8 +13,8 @@ phases:
       - docker build -t sig-devsecops-ib-ecr:1.0 .
       - docker save -o sig-devsecops-ib-ecr-1-0.tar sig-devsecops-ib-ecr:1.0
       - docker tag sig-devsecops-ib-ecr:1.0 public.ecr.aws/q8s1o0x0/sig-devsecops-ib-ecr:1.0
-      - aws ecr start-image-scan --repository-name public.ecr.aws/q8s1o0x0/sig-devsecops-ib-ecr --image-id imageTag=1.0 --region us-east-2
-      - aws ecr describe-image-scan-findings --repository-name public.ecr.aws/q8s1o0x0/sig-devsecops-ib-ecr --image-id imageTag=1.0 --region us-east-2
+      - aws ecr start-image-scan --repository-name gallery.ecr.aws/q8s1o0x0/sig-devsecops-ib-ecr --image-id imageTag=1.0 --region us-east-2
+      - aws ecr describe-image-scan-findings --repository-name gallery.ecr.aws/q8s1o0x0/sig-devsecops-ib-ecr --image-id imageTag=1.0 --region us-east-2
   post_build:
     commands:
       - echo ================Build completed on `date`================
