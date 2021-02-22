@@ -12,14 +12,11 @@ phases:
       - mvn clean package
       - docker build -t sig-devsecops-ib-ecr:1.0 .
       - docker tag sig-devsecops-ib-ecr:1.0 946667311654.dkr.ecr.us-east-2.amazonaws.com/sig-devsecops-ib-ecr:1.0
-  push_docker_image:
+  post_build:
     commands:
       - echo ================Build completed on `date`================
       - echo ================Pushing the Docker image================
       - docker push 946667311654.dkr.ecr.us-east-2.amazonaws.com/sig-devsecops-ib-ecr:1.0
-  image_scan:
-    commands:
-      - echo ================Trigger Image Scan================
       - aws ecr start-image-scan --repository-name 946667311654.dkr.ecr.us-east-2.amazonaws.com/sig-devsecops-ib-ecr --image-id imageTag=1.0 --region us-east-2
       - aws ecr describe-image-scan-findings --repository-name 946667311654.dkr.ecr.us-east-2.amazonaws.com/sig-devsecops-ib-ecr --image-id imageTag=1.0 --region us-east-2
 artifacts:
