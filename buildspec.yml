@@ -5,18 +5,18 @@ phases:
     commands:
       - echo ================Logging in to Amazon ECR================
       - aws --version
-      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 946667311654.dkr.ecr.us-east-1.amazonaws.com
+      - aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 946667311654.dkr.ecr.us-east-2.amazonaws.com
   build:
     commands:
       - echo ================Build Maven Package and Docker Image================
       - mvn clean package
       - docker build -t sig-devsecops-ib-ecr:1.0 .
-      - docker tag sig-devsecops-ib-ecr:1.0 946667311654.dkr.ecr.us-east-1.amazonaws.com/sig-devsecops-ib-ecr:1.0
+      - docker tag sig-devsecops-ib-ecr:1.0 946667311654.dkr.ecr.us-east-2.amazonaws.com/sig-devsecops-ib-ecr:1.0
   post_build:
     commands:
       - echo ================Build completed on `date`================
       - echo ================Pushing the Docker image================
-      - docker push 946667311654.dkr.ecr.us-east-1.amazonaws.com/sig-devsecops-ib-ecr:1.0
+      - docker push 946667311654.dkr.ecr.us-east-2.amazonaws.com/sig-devsecops-ib-ecr:1.0
 artifacts:
   files:
      - aws_stack.yml
