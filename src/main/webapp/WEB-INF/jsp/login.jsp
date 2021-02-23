@@ -62,7 +62,7 @@
 			</div>
 			<div class="col-sm-5 col-lg-4">
 				<div class="login-copytext">
-					<h2>Welcome to InsecureBank!</h2>
+					<h2>Welcome to BootCamp!</h2>
 					<p> Log in to access your checking, savings, credit cards, and mortgage accounts.</p>
 					<h2>Financial Security</h2>
 					<p>Check balances, make transfers, make payments, and make toast. Is it secure?
