@@ -17,8 +17,8 @@ phases:
       - echo ================Build completed on `date`================
       - echo ================Pushing the Docker image================
       - docker push 946667311654.dkr.ecr.us-east-2.amazonaws.com/sig-devsecops-ib-ecr:1.0
-      - aws ecr start-image-scan --repository-name 946667311654.dkr.ecr.us-east-2.amazonaws.com/sig-devsecops-ib-ecr --image-id imageTag=1.0 --region us-east-2
-      - aws ecr describe-image-scan-findings --repository-name 946667311654.dkr.ecr.us-east-2.amazonaws.com/sig-devsecops-ib-ecr --image-id imageTag=1.0 --region us-east-2
+      - aws ecr start-image-scan --repository-name sig-devsecops-ib-ecr --image-id imageTag=1.0 --region us-east-2
+      - aws ecr describe-image-scan-findings --repository-name sig-devsecops-ib-ecr --image-id imageTag=1.0 --region us-east-2
 artifacts:
   files:
      - aws_stack.yml
