@@ -4,6 +4,10 @@ files:
   - source: /docker-compose.yml
     destination: /home/ubuntu/deploy	    
 hooks:	
+  AfterInstall:
+    - location: scripts/check_dependencies.sh
+      timeout: 300
+      runas: root
   ApplicationStart:
     - location: scripts/start_server
       timeout: 300

@@ -1,0 +1,17 @@
+#!/bin/bash
+aws --version
+while [ $? -ne 0 ]
+do
+  for i in 1 2 3
+  do
+    echo "Checking $i time"
+    sleep 10
+    aws --version
+    if [ $? -eq 0 ]
+	then
+	    exit 0
+    fi
+  done
+  exit 1
+  echo "AWS CLI not installed" 
+done
