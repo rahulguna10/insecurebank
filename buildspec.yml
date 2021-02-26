@@ -24,6 +24,6 @@ artifacts:
      - aws_stack.yml
      - docker-compose.yml
      - appspec.yml
-     - scripts/check_dependencies
+     - scripts/install_dependencies
      - scripts/start_server
      - scripts/stop_server
